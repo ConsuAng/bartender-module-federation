@@ -1,0 +1,23 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="box-input">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" [(ngModel)]="loginData.email" name="email" required>
+    </div>
+    <div class="box-input">
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" [(ngModel)]="loginData.password" name="password" required>
+    </div>
+    <div class="button">
+      <button type="submit">Iniciar Sesión</button>
+    </div>
+  </form>
+  <div class="register">
+    <h3>No tienes una cuenta?</h3>
+    <button routerLink="/login/register">Registrate aquí!</button>
+    <button (click)="onclick()">ALERTA</button>
+  </div>
+</div>
+<div class="spin" *ngIf="isLoading">
+  <nz-spin nzSimple></nz-spin>
+</div>
