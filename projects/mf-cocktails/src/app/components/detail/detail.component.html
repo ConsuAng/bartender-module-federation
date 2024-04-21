@@ -2,16 +2,16 @@
   <div class="top">
     <div class="title">
       <h1>
-        {{cocktail.strDrink}}
+        {{cocktail?.strDrink}}
       </h1>
     </div>
     <div class="content">
-      <img src={{cocktail.strDrinkThumb}} />
+      <img src={{cocktail?.strDrinkThumb}} />
       <div>
         <h3>Instrucciones:</h3>
-        {{cocktail.strInstructions}}
+        {{cocktail?.strInstructions}}
         <h4>Vaso recomendado:</h4>
-        {{cocktail.strGlass}}
+        {{cocktail?.strGlass}}
       </div>
     </div>
     <h4>Ingredientes necesarios y medidas necesarias:</h4>
@@ -51,5 +51,7 @@
         <td *ngIf="cocktail?.strMeasure15">{{cocktail.strMeasure15}}</td>
       </tr>
     </table>
+    <span class="heart" *ngIf="isFav">♥</span>
+    <span class="heart" *ngIf="!isFav" (click)="addFav()">♡</span>
   </div>
 </div>

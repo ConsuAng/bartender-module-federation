@@ -24,7 +24,8 @@ import { CocktailService } from '../services/cocktail.service';
   ],
   providers:[
     SearchService,
-    CocktailService
+    CocktailService,
+    
   ]
 })
 export class CocktailsModule { }

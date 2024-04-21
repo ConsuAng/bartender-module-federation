@@ -30,7 +30,6 @@ module.exports = {
         
         // For hosts (please adjust)
          remotes: {
-             "mfHome": "http://localhost:4201/remoteEntry.js",
              "mfLogin": "http://localhost:4202/remoteEntry.js",
              "mfCocktails":"http://localhost:4203/remoteEntry.js",
              "mfUser": "http://localhost:4204/remoteEntry.js"
@@ -42,6 +41,7 @@ module.exports = {
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "ng-zorro-antd": { singleton: true, strictVersion: true },
+          "jwt-decode": { singleton: true, strictVersion: true },
           rxjs: {
             singleton: true,
             strictVersion: true,

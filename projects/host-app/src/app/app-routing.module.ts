@@ -13,11 +13,6 @@ const routes: Routes = [
     loadChildren: () => import('mfLogin/LoginModule').then((m) => m.LoginModule),
   },
   {
-    path:'mf-home',
-    loadChildren: () => import('mfHome/ShowInfoModule').then((m) => m.ShowInfoModule),
-    canActivate:[AuthGuard]
-  },
-  {
     path:'cocktails',
     loadChildren: () => import('mfCocktails/CocktailsModule').then((m) => m.CocktailsModule),
     canActivate:[AuthGuard]

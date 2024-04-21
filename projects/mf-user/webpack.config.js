@@ -41,6 +41,7 @@ module.exports = {
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "ng-zorro-antd": { singleton: true, strictVersion: true },
+          "jwt-decode": { singleton: true, strictVersion: true },
           rxjs: {
             singleton: true,
             strictVersion: true,
