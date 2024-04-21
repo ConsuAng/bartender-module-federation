@@ -1,0 +1,8 @@
+<div class="container">
+  <div *ngFor="let cocktail of data">
+    <div class="card" routerLink="{{href + cocktail.idDrink}}">
+      <img src="{{cocktail?.strDrinkThumb}}" />
+      {{cocktail?.strDrink}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    //height: calc(100vh - 55px);
+    height: 100%;
+    justify-content: center;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    
+    img {
+        height: 200px;
+        padding-bottom: 15px;
+    }
+}

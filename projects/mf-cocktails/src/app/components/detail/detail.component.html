@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="top">
+    <div class="title">
+      <h1>
+        {{cocktail.strDrink}}
+      </h1>
+    </div>
+    <div class="content">
+      <img src={{cocktail.strDrinkThumb}} />
+      <div>
+        <h3>Instrucciones:</h3>
+        {{cocktail.strInstructions}}
+        <h4>Vaso recomendado:</h4>
+        {{cocktail.strGlass}}
+      </div>
+    </div>
+    <h4>Ingredientes necesarios y medidas necesarias:</h4>
+    <table>
+      <tr>
+        <th *ngIf="cocktail?.strIngredient1">{{cocktail.strIngredient1}}</th>
+        <th *ngIf="cocktail?.strIngredient2">{{cocktail.strIngredient2}}</th>
+        <th *ngIf="cocktail?.strIngredient3">{{cocktail.strIngredient3}}</th>
+        <th *ngIf="cocktail?.strIngredient4">{{cocktail.strIngredient4}}</th>
+        <th *ngIf="cocktail?.strIngredient5">{{cocktail.strIngredient5}}</th>
+        <th *ngIf="cocktail?.strIngredient6">{{cocktail.strIngredient6}}</th>
+        <th *ngIf="cocktail?.strIngredient7">{{cocktail.strIngredient7}}</th>
+        <th *ngIf="cocktail?.strIngredient8">{{cocktail.strIngredient8}}</th>
+        <th *ngIf="cocktail?.strIngredient9">{{cocktail.strIngredient9}}</th>
+        <th *ngIf="cocktail?.strIngredient10">{{cocktail.strIngredient10}}</th>
+        <th *ngIf="cocktail?.strIngredient11">{{cocktail.strIngredient11}}</th>
+        <th *ngIf="cocktail?.strIngredient12">{{cocktail.strIngredient12}}</th>
+        <th *ngIf="cocktail?.strIngredient13">{{cocktail.strIngredient13}}</th>
+        <th *ngIf="cocktail?.strIngredient14">{{cocktail.strIngredient14}}</th>
+        <th *ngIf="cocktail?.strIngredient15">{{cocktail.strIngredient15}}</th>
+      </tr>
+      <tr>
+        <td *ngIf="cocktail?.strMeasure1">{{cocktail.strMeasure1}}</td>
+        <td *ngIf="cocktail?.strMeasure2">{{cocktail.strMeasure2}}</td>
+        <td *ngIf="cocktail?.strMeasure3">{{cocktail.strMeasure3}}</td>
+        <td *ngIf="cocktail?.strMeasure4">{{cocktail.strMeasure4}}</td>
+        <td *ngIf="cocktail?.strMeasure5">{{cocktail.strMeasure5}}</td>
+        <td *ngIf="cocktail?.strMeasure6">{{cocktail.strMeasure6}}</td>
+        <td *ngIf="cocktail?.strMeasure7">{{cocktail.strMeasure7}}</td>
+        <td *ngIf="cocktail?.strMeasure8">{{cocktail.strMeasure8}}</td>
+        <td *ngIf="cocktail?.strMeasure9">{{cocktail.strMeasure9}}</td>
+        <td *ngIf="cocktail?.strMeasure10">{{cocktail.strMeasure10}}</td>
+        <td *ngIf="cocktail?.strMeasure11">{{cocktail.strMeasure11}}</td>
+        <td *ngIf="cocktail?.strMeasure12">{{cocktail.strMeasure12}}</td>
+        <td *ngIf="cocktail?.strMeasure13">{{cocktail.strMeasure13}}</td>
+        <td *ngIf="cocktail?.strMeasure14">{{cocktail.strMeasure14}}</td>
+        <td *ngIf="cocktail?.strMeasure15">{{cocktail.strMeasure15}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

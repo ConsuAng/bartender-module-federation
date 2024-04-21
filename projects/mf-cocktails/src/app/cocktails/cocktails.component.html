@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="container__top">
+    <h1>Buscar Cocktail ;)</h1>
+    <div class="search">
+      <input placeholder="Buscar por nombre..." [(ngModel)]="search"
+        (ngModelChange)="searchInBase($event)" />
+     <!--  <div class="">
+        <img class="h-6" src="" />
+      </div> -->
+    </div>
+    <div *ngIf="isLoading" class="loader_container">
+      <div  class="loader"></div>
+    </div>
+  </div>
+  <app-search *ngIf="search" [data]="data"></app-search>
+
+</div>
