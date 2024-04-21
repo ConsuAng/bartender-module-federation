@@ -1,0 +1,36 @@
+.navbar {
+  width: 100%;
+  background: aquamarine;
+  height: 55px;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    width: 100%;
+    max-width: 1350px;
+    display: flex;
+    justify-content: space-between;
+
+    .store {
+      cursor: pointer;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  cursor: pointer;
+  padding-right: 24px;
+}
+
+a {
+  text-decoration: none;
+}
