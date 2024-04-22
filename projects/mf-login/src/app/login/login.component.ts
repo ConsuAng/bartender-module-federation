@@ -27,7 +27,6 @@ export class LoginComponent {
     this.isLoading = true;
     this.service.login(this.loginData).subscribe({
       next: (response) => {
-        //sessionStorage.setItem('token', response.token);
         this.authService.setToken(response.token);
         this.isLoading = false;
         this.router.navigate([`/profile`]);

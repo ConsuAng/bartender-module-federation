@@ -54,7 +54,7 @@ module.exports = {
     sharedMappings.getPlugin(),
   ],
   devServer: {
-    port: 4202,  // Asegúrate de que este puerto sea el correcto para tu aplicación
+    port: 4202, 
     historyApiFallback: true,
     headers: {
       "Access-Control-Allow-Origin": "*",
