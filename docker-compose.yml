@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  host-app:
+    build:
+      context: .
+      dockerfile: ./projects/host-app/Dockerfile
+    ports:
+      - "4201:80"
+  mf-cocktails:
+    build:
+      context: .
+      dockerfile: ./projects/mf-cocktails/Dockerfile
+    ports:
+      - "4203:80"
+  mf-login:
+    build:
+      context: .
+      dockerfile: ./projects/mf-login/Dockerfile
+    ports:
+      - "4202:80"
+  mf-user:
+    build:
+      context: .
+      dockerfile: ./projects/mf-user/Dockerfile
+    ports:
+      - "4204:80"

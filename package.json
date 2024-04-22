@@ -4,10 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
+    "build:host-app": "ng build host-app --configuration production",
+    "build:mf-cocktails": "ng build mf-cocktails --configuration production",
+    "build:mf-login": "ng build mf-login --configuration production",
+    "build:mf-user": "ng build mf-user --configuration production",
+    "build:all": "npm run build:host-app && npm run build:mf-cocktails && npm run build:mf-login && npm run build:mf-user"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +24,8 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
-    "ng-zorro-antd": "^17.4.0",
     "jwt-decode": "^3.1.2",
+    "ng-zorro-antd": "^17.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
