@@ -1,3 +1,10 @@
+<div class="back">
+  <div class="text">
+    <div class="box" (click)="goBack()">
+      <span>☜</span> Volver a explorar
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="top">
     <div class="title">
@@ -51,7 +58,7 @@
         <td *ngIf="cocktail?.strMeasure15">{{cocktail.strMeasure15}}</td>
       </tr>
     </table>
-    <span class="heart" *ngIf="isFav">♥</span>
+    <span class="heart" *ngIf="isFav" (click)="removeFav()">♥</span>
     <span class="heart" *ngIf="!isFav" (click)="addFav()">♡</span>
   </div>
 </div>

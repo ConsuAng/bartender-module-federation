@@ -10,6 +10,7 @@ import { RegisterComponent } from '../components/register/register.component';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { AuthService } from '../../../../host-app/src/app/shared/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
   ],
   providers:[
     LoginService,
-    NzMessageService
+    NzMessageService,
+    AuthService
   ]
 })
 export class LoginModule { }

@@ -1,3 +1,28 @@
+.back {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .text {
+    width: 100%;
+    max-width: 1200px;
+    font-size: 16px;
+
+    .box {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      width: fit-content;
+
+      span {
+        font-size: 35px;
+        padding-right: 10px;
+      }
+    }
+
+  }
+}
+
 .container {
   width: 100%;
   display: flex;

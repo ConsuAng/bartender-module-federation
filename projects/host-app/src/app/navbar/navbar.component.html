@@ -7,7 +7,10 @@
           <a routerLink="cocktails">Cocktails</a>
         </li>
         <li>
-          <a routerLink="mf-home">Usuario</a>
+          <a routerLink="profile">Usuario</a>
+        </li>
+        <li *ngIf="token" (click)="logOut()">
+          <a routerLink="profile">Logout</a>
         </li>
       </ul>
     </div>

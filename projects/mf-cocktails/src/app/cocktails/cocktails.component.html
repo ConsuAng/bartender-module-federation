@@ -4,9 +4,6 @@
     <div class="search">
       <input placeholder="Buscar por nombre..." [(ngModel)]="search"
         (ngModelChange)="searchInBase($event)" />
-     <!--  <div class="">
-        <img class="h-6" src="" />
-      </div> -->
     </div>
     <div *ngIf="isLoading" class="loader_container">
       <div  class="loader"></div>

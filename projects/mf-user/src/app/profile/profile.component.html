@@ -1,1 +1,29 @@
-<p>profile works!</p>
+<div *ngIf="!userCocktails" class="no-cocktails">
+  <div class="noCocktails_profile">
+    <h1>Hola {{user?.name}} {{user?.lastName}}</h1>
+    <h3>
+      Aún no tienes cocktails favoritos :(
+    </h3>
+    <h4>Comienza explorando aquí cocktails para encontrar esos que más quieres preparar</h4>
+    <div class="button">
+      <button routerLink="/cocktails">Buscar cocktails</button>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="userCocktails">
+  <div class="profile">
+    <h2>Hola {{user?.name}} {{user?.lastName}}</h2>
+    <h3>
+      Aquí están tus cocktails favoritos ;)
+    </h3>
+  </div>
+  <div class="cocktails" >
+    <div *ngFor="let cocktail of userCocktails" class="card" >
+      <img  src={{cocktail.cocktail_image}} (click)="goDetail(cocktail.cocktail_id)"/>
+      <div class="box-bottom">
+        <h2 (click)="goDetail(cocktail.cocktail_id)">{{cocktail.cocktail_name}}</h2>
+        <span class="heart" (click)="removeCocktail(cocktail.cocktail_id)">♥</span>
+      </div>
+    </div>
+  </div>
+</div>

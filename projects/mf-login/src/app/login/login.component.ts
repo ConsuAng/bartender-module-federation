@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
+import { AuthService } from '../../../../host-app/src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -18,16 +19,18 @@ export class LoginComponent {
   constructor(
     private service: LoginService,
     private router: Router,
-    private message: NzMessageService
+    private message: NzMessageService,
+    private authService: AuthService
   ) { }
 
   public onSubmit() {
     this.isLoading = true;
     this.service.login(this.loginData).subscribe({
       next: (response) => {
-        sessionStorage.setItem('token', response.token);
+        //sessionStorage.setItem('token', response.token);
+        this.authService.setToken(response.token);
         this.isLoading = false;
-        this.router.navigate([`/cocktails`]);
+        this.router.navigate([`/profile`]);
       },
       error: (error: any) => {
         this.isLoading = false;

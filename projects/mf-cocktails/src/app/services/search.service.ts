@@ -10,7 +10,7 @@ export class SearchService {
 
   public search(params: HttpParams): Observable<any> {
     const query = params ? `?${params.toString()}` : '';
-    return this.http.get(` http://localhost:8081/cocktail${query}`);
+    return this.http.get(` http://localhost:8081/cocktails${query}`);
   }
 
 }

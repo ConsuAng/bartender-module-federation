@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CocktailService } from '../../services/cocktail.service';
 import { ICocktail } from '../../model/cocktail.interface';
 import { IFavoriteCocktail } from '../../model/favorite-cocktail.interface';
@@ -18,8 +18,8 @@ export class DetailComponent implements OnInit{
 
   constructor(
     private route: ActivatedRoute,
-    private service: CocktailService
-    
+    private service: CocktailService,
+    private router: Router,    
   ) { }
 
   ngOnInit(): void {
@@ -51,6 +51,8 @@ export class DetailComponent implements OnInit{
         const fav = response.filter((x: IFavoriteCocktail) => x.cocktail_id === this.cocktailId);
         if(fav.length >= 1) {
           this.isFav = true;
+        } else {
+          this.isFav = false;
         }
       },
       error:(error) => {
@@ -70,7 +72,23 @@ export class DetailComponent implements OnInit{
         console.log(error)
       }
     });
+  }
 
+  public removeFav(): void {
+    this.isLoading = true;
+    this.service.removeFavCocktail(String(this.token),this.cocktail.idDrink).subscribe({
+      next: (response) => {
+        this.getCocktail(this.cocktailId);
+        this.getFavorites();
+      },
+      error: (error) => {
+        console.log(error)
+      }
+    });
+  }
+
+  public goBack(): void {
+    this.router.navigate(["/cocktails"]);
   }
 
 }

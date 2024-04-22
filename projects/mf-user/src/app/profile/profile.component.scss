@@ -1,0 +1,66 @@
+.no-cocktails {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 55px);
+
+  .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+
+    button {
+      padding: 10px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border: transparent;
+      border-radius: 8px;
+    }
+  }
+
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .profile {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .cocktails {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .card {
+      padding: 25px;
+      cursor: pointer;
+
+      img {
+        height: 250px;
+      }
+
+      .box-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 15px;
+      }
+
+      .heart {
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
