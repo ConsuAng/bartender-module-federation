@@ -40,10 +40,4 @@ export class LoginComponent {
     });
 
   }
-
-  public onclick(): void {
-    this.message.success('This is a prompt message for success, and it will disappear in 10 seconds', {
-      nzDuration: 3000
-    });
-  }
 }
