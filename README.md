@@ -1,27 +1,23 @@
-# Workspace
+# Angelus Bartender Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+Web page for Angelus Bartender generate with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4. and [Module Federations] (https://www.angulararchitects.io/blog/the-microfrontend-revolution-module-federation-in-webpack-5/) for the micro frontends architecture.
+Here you can create an account, search for differents cocktails and save your favorites ♥
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+For local dev server run this command on different consoles:
 
-## Code scaffolding
+`ng serve host-app`
+`ng serve mf-cocktails`
+`ng serve mf-login`
+`ng serve mf-user`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Navigate to `http://localhost:4201/`. The application will automatically reload if you change any of the source files.
 
-## Build
+Be sure to serve the host-app because is the shell for the others modules.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ussing Docker
 
-## Running unit tests
+Run `docker-compose build` and `docker-compose up`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
